@@ -1,14 +1,15 @@
-package ru.autotest.test.steps;
+package ru.autotest.test.steps.Ya;
 
 import cucumber.api.java.bg.И;
 import cucumber.api.java.bg.То;
-import ru.autotest.test.pages.MainPage;
+import ru.autotest.test.pages.Ya.MainPage;
+import ru.autotest.test.steps.BasicSteps;
 
 public class MainPageSteps {
 
     private MainPage mainPage = new MainPage(BasicSteps.driver);
 
-    @И("открыть главную страницу$")
+    @И("открыть главную страницу Yandex$")
     public void goToMainPage(){
         mainPage.goToMainPage();
     }
@@ -18,7 +19,7 @@ public class MainPageSteps {
         mainPage.logIn(login, password);
     }
 
-    @То("открыта главная$")
+    @То("открыта главная Yandex$")
     public void checkMainPage(){
         mainPage.checkMainPage();
     }

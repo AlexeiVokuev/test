@@ -1,4 +1,4 @@
-package ru.autotest.test.pages;
+package ru.autotest.test.pages.Ya;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;

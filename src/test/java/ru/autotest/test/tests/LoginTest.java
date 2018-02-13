@@ -6,8 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.autotest.test.pages.MailBoxPage;
-import ru.autotest.test.pages.MainPage;
+import ru.autotest.test.pages.Ya.MailBoxPage;
+import ru.autotest.test.pages.Ya.MainPage;
 
 import java.util.concurrent.TimeUnit;
 
