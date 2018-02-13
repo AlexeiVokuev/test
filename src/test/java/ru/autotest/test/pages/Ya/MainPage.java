@@ -36,7 +36,7 @@ public class MainPage {
     }
 
     public void logIn(String login, String password){
-        System.out.println("выполняется ввод логина/пароля..");
+        System.out.println("выполняется ввод логина/пароля: " + login + " / " + password);
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
         System.out.println("выполняется клик на " + loginButton.getText());

@@ -16,6 +16,7 @@ public class MainPageSteps {
 
     @И("войти с почтой (.*) и паролем (.*)$")
     public void logIn(String login, String password){
+
         mainPage.logIn(login, password);
     }
 

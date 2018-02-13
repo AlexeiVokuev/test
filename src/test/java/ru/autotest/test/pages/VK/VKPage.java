@@ -16,10 +16,10 @@ public class VKPage{
 
     private WebDriver driver;
 
-    @FindBy(name = "email")
+    @FindBy(id = "index_email")
     private WebElement loginField;
 
-    @FindBy(name = "pass")
+    @FindBy(id = "index_pass")
     private WebElement passwordField;
 
     @FindBy(id = "index_login_button")
@@ -37,10 +37,17 @@ public class VKPage{
     }
 
     public void logIn(String login, String password){
-        System.out.println("выполняется ввод логина/пароля..");
+        System.out.println("выполняется ввод логина/пароля: " + login + " / " + password);
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
         System.out.println("выполняется клик на " + loginButton.getText());
         loginButton.click();
+        try{
+            Thread.sleep(5000);
+        }
+        catch(Exception e){
+            System.out.println("не вышло подождать");
+            e.printStackTrace();
+        }
     }
 }

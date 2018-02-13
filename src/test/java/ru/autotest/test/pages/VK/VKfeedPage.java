@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class VKfeedPage {
-    public String VKfeedPageURL = "https://vk.com/feed/";
+    public String VKfeedPageURL = "https://vk.com/feed";
 
     public VKfeedPage(WebDriver driver){
         PageFactory.initElements(driver, this);
@@ -22,10 +22,10 @@ public class VKfeedPage {
     @FindBy(id = "top_profile_link")
     private WebElement torProfileLink;
 
-    @FindBy(id = "top_logout_link")
+    @FindBy(xpath = "//*[@id=\"top_logout_link\"]")
     private WebElement topLogoutLink;
 
-    @FindBy(id = "top_profile_name")
+    @FindBy(className = "top_profile_name")
     private WebElement topProfileName;
 
     public void checkVKfeedPage(){
@@ -37,6 +37,14 @@ public class VKfeedPage {
     public void logOut(){
         System.out.println("выполняется клик на " + torProfileLink.getText());
         torProfileLink.click();
+        try{
+            System.out.println("подождем...");
+            Thread.sleep(3000);
+        }
+        catch(Exception e){
+            System.out.println("не вышло подождать");
+            e.printStackTrace();
+        }
         System.out.println("выполняется клик на " + topLogoutLink.getText());
         topLogoutLink.click();
     }
