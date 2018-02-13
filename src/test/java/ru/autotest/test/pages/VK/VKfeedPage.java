@@ -47,11 +47,21 @@ public class VKfeedPage {
         }
         System.out.println("выполняется клик на " + topLogoutLink.getText());
         topLogoutLink.click();
+        try{
+            System.out.println("подождем...");
+            Thread.sleep(3000);
+        }
+        catch(Exception e){
+            System.out.println("не вышло подождать");
+            e.printStackTrace();
+        }
+        System.out.println("клик на " + topLogoutLink.getText() + " выполнен");
     }
 
     public void goToProfile(){
         System.out.println("выполняется клик на " + menuMain.getText());
         menuMain.click();
+        System.out.println("клик на " + menuMain.getText() + " выполнен");
     }
 
     public void profileNameCheck(String profileName) {

@@ -27,6 +27,7 @@ public class MainPage {
     public void goToMainPage(){
         System.out.println("пытаемся перейти к " + MainPageURL);
         driver.get(MainPageURL);
+        System.out.println("переход к " + MainPageURL + " осуществлен");
     }
 
     public void checkMainPage(){
@@ -39,7 +40,9 @@ public class MainPage {
         System.out.println("выполняется ввод логина/пароля: " + login + " / " + password);
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
+        System.out.println("ввод логина/пароля: " + login + " / " + password + " выполнен");
         System.out.println("выполняется клик на " + loginButton.getText());
         loginButton.click();
+        System.out.println("клик на " + loginButton.getText() + " выполнен");
     }
 }

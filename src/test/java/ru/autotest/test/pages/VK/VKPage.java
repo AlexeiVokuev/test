@@ -28,6 +28,7 @@ public class VKPage{
     public void goToVKPage(){
         System.out.println("пытаемся перейти к " + VKPageURL);
         driver.get(VKPageURL);
+        System.out.println("переход к " + VKPageURL + " осуществлен");
     }
 
     public void checkVKPage(){
@@ -40,6 +41,7 @@ public class VKPage{
         System.out.println("выполняется ввод логина/пароля: " + login + " / " + password);
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
+        System.out.println("ввод логина/пароля: " + login + " / " + password + " выполнен");
         System.out.println("выполняется клик на " + loginButton.getText());
         loginButton.click();
         try{
@@ -49,5 +51,6 @@ public class VKPage{
             System.out.println("не вышло подождать");
             e.printStackTrace();
         }
+        System.out.println("клик на " + loginButton.getText() + " выполнен");
     }
 }

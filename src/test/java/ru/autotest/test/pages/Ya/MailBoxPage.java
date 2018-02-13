@@ -24,12 +24,17 @@ public class MailBoxPage {
     public WebElement userNameLabel;
 
     public void logOut(){
+        System.out.println("выполняется клик на " + userMenu.getText());
         userMenu.click();
+        System.out.println("клик на " + userMenu.getText() + " выполнен");
+        System.out.println("выполняется клик на " + menuExit.getText());
         menuExit.click();
+        System.out.println("клик на " + menuExit.getText() + " выполнен");
     }
 
     public void checkMailBoxUserName(String userName) {
         String factUserName = userNameLabel.getText();
+        System.out.println("пытаемся сравнить " + userName + " с " + factUserName);
         Assert.assertEquals(userName, factUserName);
     }
 }
