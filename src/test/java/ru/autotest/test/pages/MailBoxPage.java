@@ -1,5 +1,6 @@
 package ru.autotest.test.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,5 +26,10 @@ public class MailBoxPage {
     public void logOut(){
         userMenu.click();
         menuExit.click();
+    }
+
+    public void checkMailBoxUserName(String userName) {
+        String factUserName = userNameLabel.getText();
+        Assert.assertEquals(userName, factUserName);
     }
 }

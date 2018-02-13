@@ -1,5 +1,6 @@
 package ru.autotest.test.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,11 +22,24 @@ public class MainPage {
     @FindBy(xpath = "/html/body/div[1]/div[3]/div[1]/div/div[1]/div/div[1]/div[2]/div/div/div/form/div/div[2]/button")
     private WebElement loginButton;
 
-    public String MainPageURL = "https://yandex.ru";
+    public String MainPageURL = "https://yandex.ru/";
+
+    public void goToMainPage(){
+        System.out.println("пытаемся перейти к " + MainPageURL);
+        driver.get(MainPageURL);
+    }
+
+    public void checkMainPage(){
+        String factURL = driver.getCurrentUrl();
+        System.out.println("пытаемся сравнить " + MainPageURL + " с " + factURL);
+        Assert.assertEquals(MainPageURL, factURL);
+    }
 
     public void logIn(String login, String password){
+        System.out.println("выполняется ввод логина/пароля..");
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
+        System.out.println("выполняется клик на " + loginButton.getText());
         loginButton.click();
     }
 }
