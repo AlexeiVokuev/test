@@ -1,7 +1,7 @@
 package ru.autotest.test.steps.VK;
 
-import cucumber.api.java.bg.И;
-import cucumber.api.java.bg.То;
+import io.cucumber.java.ru.И;
+import io.cucumber.java.ru.То;
 import ru.autotest.test.pages.VK.VKfeedPage;
 import ru.autotest.test.steps.BasicSteps;
 

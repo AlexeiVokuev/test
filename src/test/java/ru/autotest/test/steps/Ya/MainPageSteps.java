@@ -1,7 +1,8 @@
 package ru.autotest.test.steps.Ya;
 
-import cucumber.api.java.bg.И;
-import cucumber.api.java.bg.То;
+
+import io.cucumber.java.ru.И;
+import io.cucumber.java.ru.То;
 import ru.autotest.test.pages.Ya.MainPage;
 import ru.autotest.test.steps.BasicSteps;
 

@@ -1,8 +1,8 @@
 package ru.autotest.test.runners;
 
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -10,8 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/features",
         glue = "ru.autotest.test.steps",
         tags = "@runme",
-        dryRun = false,
-        strict = false
+        dryRun = false
 )
 public class RunTest {
 }
